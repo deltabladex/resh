@@ -118,7 +118,11 @@ const handleYesClick = () => {
 
     // Add more date ideas as needed
   ];
-
+  var letsGo = document.createElement("button");
+  letsGo.textContent = "Click to view the Plans";
+  letsGo.style.position = "fixed";
+  yesBtn.replaceWith(letsGoBtn);
+  
   // Create and style a new button for Let's Go!
   const letsGoBtn = document.createElement("button");
   var videoPlayer = document.getElementById("videoPlayer");
@@ -145,7 +149,7 @@ const handleYesClick = () => {
   });
 
   // Replace yesBtn with the new letsGoBtn
-  yesBtn.replaceWith(letsGoBtn);
+  letsgo.replaceWith(letsGoBtn);
 };
 
 const handleNoMouseOver = () => {
