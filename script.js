@@ -137,10 +137,20 @@ const handleYesClick = () => {
 
   // Add a click event listener to prompt the user with random romantic date ideas
   letsGoBtn.addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * dateIdeas.length);
-    const selectedDateIdea = dateIdeas[randomIndex];
-
-    alert(`How about this romantic date idea: ${selectedDateIdea}`);
+    var videoContainer = document.getElementById("videoContainer");
+    var videoElement = document.createElement("video");
+    videoElement.setAttribute("controls", true);
+    videoElement.setAttribute("width", "400");
+    videoElement.setAttribute("height", "550");
+  
+    var sourceElement = document.createElement("source");
+    sourceElement.setAttribute("src", "image/POV.mp4");
+    sourceElement.setAttribute("type", "video/mp4");
+    
+    videoElement.appendChild(sourceElement);
+    videoContainer.appendChild(videoElement);
+    
+    videoElement.play();
   });
 
   // Replace yesBtn with the new letsGoBtn
@@ -158,20 +168,4 @@ const handleNoMouseOver = () => {
 
 yesBtn.addEventListener("click", handleYesClick);
 noBtn.addEventListener("mouseover", handleNoMouseOver);
-
-document.getElementById("playButton").addEventListener("click", function() {
-    var videoContainer = document.getElementById("videoContainer");
-    var videoElement = document.createElement("video");
-    videoElement.setAttribute("controls", true);
-    videoElement.setAttribute("width", "400");
-    videoElement.setAttribute("height", "550");
-  
-    var sourceElement = document.createElement("source");
-    sourceElement.setAttribute("src", "image/POV.mp4");
-    sourceElement.setAttribute("type", "video/mp4");
-    
-    videoElement.appendChild(sourceElement);
-    videoContainer.appendChild(videoElement);
-    
-    videoElement.play();
 });
