@@ -149,6 +149,14 @@ const handleYesClick = () => {
  yesBtn.replaceWith(letsGoBtn);
 };
 
+videoPlayer.addEventListener("ended", function() {
+    // Hide the video player
+    videoPlayer.style.display = "none";
+    
+    // Display a single picture after the video ends
+    displayPicture();
+});
+
 
 
 const handleNoMouseOver = () => {
