@@ -147,7 +147,7 @@ const handleYesClick = () => {
   });
 
   // Replace yesBtn with the new letsGoBtn
-  yesBtn.replaceWith(letsGoBtn);
+ 
 };
 
 
@@ -186,6 +186,7 @@ function displayPictures() {
     
     // Display the image container
     imageContainer.style.display = "block";
+   yesBtn.replaceWith(letsGoBtn);
 }
 
 const handleNoMouseOver = () => {
