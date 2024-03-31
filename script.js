@@ -118,17 +118,13 @@ const handleYesClick = () => {
 
     // Add more date ideas as needed
   ];
-  var letsGo = document.createElement("button");
-  letsGo.textContent = "Click to view the Plans";
-  letsGo.style.position = "fixed";
-  yesBtn.replaceWith(letsGoBtn);
   
   // Create and style a new button for Let's Go!
   const letsGoBtn = document.createElement("button");
   var videoPlayer = document.getElementById("videoPlayer");
   letsGoBtn.textContent = "My Reaction afterwards";
   letsGoBtn.classList.add("letsgo-btn"); // You can add a class for styling if needed
-  letsGoBtn.style.position = "absolute";
+  letsGoBtn.style.position = "fixed";
 
   // Adjust the left position based on screen width
   if (window.innerWidth <= 800) {
