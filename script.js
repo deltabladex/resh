@@ -165,7 +165,7 @@ document.getElementById("playButton").addEventListener("click", function() {
     videoElement.setAttribute("controls", true);
     
     var sourceElement = document.createElement("source");
-    sourceElement.setAttribute("src", "https://drive.google.com/file/d/1DbKozq-ofNC2cxaYclfV6U89Ne2iuwHo/view?usp=sharing4");
+    sourceElement.setAttribute("src", "image/POV.mp4");
     sourceElement.setAttribute("type", "video/mp4");
     
     videoElement.appendChild(sourceElement);
