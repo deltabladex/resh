@@ -147,15 +147,7 @@ const handleYesClick = () => {
 
   // Replace yesBtn with the new letsGoBtn
  yesBtn.replaceWith(letsGoBtn);
-
-  // Add event listener for when the video ends
-videoPlayer.addEventListener("ended", function() {
-    // Hide the video player
-    videoPlayer.style.display = "none";
-    
-    // Display a single picture after the video ends
-    displayPicture();
-});
+};
 
 
 
