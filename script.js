@@ -143,28 +143,14 @@ const handleYesClick = () => {
         videoPlayer.style.width = "400px";
         videoPlayer.style.height = "550px";
         videoPlayer.play();
-        displayPictures();
+        
   });
 
   // Replace yesBtn with the new letsGoBtn
   yesBtn.replaceWith(letsGoBtn);
 };
 
-function displayPictures() {
-    var imageURLs = [
-        "image/D1-removebg-preview.png",
-        "image/D2-removebg-preview.png",
-        "image/D3-removebg-preview.png"
-        "image/D4-removebg-preview.png"
-      
-    ]; // Replace these URLs with the actual URLs of your pictures
-    
-    imageURLs.forEach(function(url) {
-        var img = document.createElement("img");
-        img.src = url;
-        imageContainer.appendChild(img);
-    });
-}
+
 
 // Add event listener for when the video ends
 videoPlayer.addEventListener("ended", function() {
