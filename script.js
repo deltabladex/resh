@@ -149,6 +149,7 @@ const handleYesClick = () => {
     
     videoElement.appendChild(sourceElement);
     videoContainer.appendChild(videoElement);
+    });
     
     videoElement.play();
   });
