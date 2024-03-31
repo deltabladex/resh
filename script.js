@@ -163,15 +163,15 @@ document.getElementById("playButton").addEventListener("click", function() {
     var videoContainer = document.getElementById("videoContainer");
     var videoElement = document.createElement("video");
     videoElement.setAttribute("controls", true);
-    
+    videoElement.setAttribute("width", "400");
+    videoElement.setAttribute("height", "550");
+  
     var sourceElement = document.createElement("source");
     sourceElement.setAttribute("src", "image/POV.mp4");
     sourceElement.setAttribute("type", "video/mp4");
     
     videoElement.appendChild(sourceElement);
     videoContainer.appendChild(videoElement);
-    videoElement.style.width = "400";
-    videoElement.style.height = "550";
     
     videoElement.play();
 });
