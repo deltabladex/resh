@@ -139,8 +139,8 @@ const handleYesClick = () => {
   // Add a click event listener to prompt the user with random romantic date ideas
   letsGoBtn.addEventListener("click", () => {
         videoPlayer.style.display = "block";
-        videoPlayer.style.width = "400";
-        videoPlayer.style.height = "550";
+        videoPlayer.style.width = "400px";
+        videoPlayer.style.height = "550px";
         videoPlayer.play();
   });
 
