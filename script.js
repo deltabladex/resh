@@ -157,16 +157,6 @@ videoPlayer.addEventListener("ended", function() {
     displayPicture();
 });
 
-function displayPicture() {
-    var imageURL = "image/D3-removebg-preview.png"; // Replace this URL with the actual URL of your picture
-    
-    var img = document.createElement("img");
-    img.src = imageURL;
-    imageContainer.appendChild(img);
-    
-    // Display the image container
-    imageContainer.style.display = "block";
-}
 
 
 const handleNoMouseOver = () => {
