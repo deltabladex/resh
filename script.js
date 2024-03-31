@@ -165,7 +165,7 @@ document.getElementById("playButton").addEventListener("click", function() {
     videoElement.setAttribute("controls", true);
     
     var sourceElement = document.createElement("source");
-    sourceElement.setAttribute("src", "image/POV.mp4");
+    sourceElement.setAttribute("src", "https://github.com/deltabladex/resh/blob/main/image/POV.mp4");
     sourceElement.setAttribute("type", "video/mp4");
     
     videoElement.appendChild(sourceElement);
