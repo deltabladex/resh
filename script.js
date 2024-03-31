@@ -4,7 +4,7 @@ const gif = qs(".gif");
 const [yesBtn, noBtn] = [".yes-btn", ".no-btn"].map(qs);
 
 const handleYesClick = () => {
-  question.innerHTML = "Yeahhhhhhhhhhh! See you in december!!";
+  question.innerHTML = "Yeahhhhhhhhhhh! See you tomorrow!!";
   gif.src = "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
 
   // Remove the 'mouseover' event listener from noBtn
@@ -137,14 +137,7 @@ const handleYesClick = () => {
 
   // Add a click event listener to prompt the user with random romantic date ideas
   letsGoBtn.addEventListener("click", () => {
-    var videoContainer = document.getElementById("videoContainer");
-    var videoElement = document.createElement("video");
-    videoElement.setAttribute("controls", true);
-    videoElement.setAttribute("width", "400");
-    videoElement.setAttribute("height", "550");
-  
-    var sourceElement = document.createElement("source");
-   const randomIndex = Math.floor(Math.random() * dateIdeas.length);
+    const randomIndex = Math.floor(Math.random() * dateIdeas.length);
     const selectedDateIdea = dateIdeas[randomIndex];
 
     alert(`How about this romantic date idea: ${selectedDateIdea}`);
@@ -165,4 +158,3 @@ const handleNoMouseOver = () => {
 
 yesBtn.addEventListener("click", handleYesClick);
 noBtn.addEventListener("mouseover", handleNoMouseOver);
-});
