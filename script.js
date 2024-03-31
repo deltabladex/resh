@@ -124,7 +124,7 @@ const handleYesClick = () => {
   var videoPlayer = document.getElementById("videoPlayer");
   letsGoBtn.textContent = "My Reaction afterwards";
   letsGoBtn.classList.add("letsgo-btn"); // You can add a class for styling if needed
-  letsGoBtn.style.position = "fixed";
+  letsGoBtn.style.position = "absolute";
 
   // Adjust the left position based on screen width
   if (window.innerWidth <= 800) {
@@ -145,7 +145,7 @@ const handleYesClick = () => {
   });
 
   // Replace yesBtn with the new letsGoBtn
-  letsgo.replaceWith(letsGoBtn);
+  yesBtn.replaceWith(letsGoBtn);
 };
 
 const handleNoMouseOver = () => {
