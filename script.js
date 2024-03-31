@@ -122,6 +122,7 @@ const handleYesClick = () => {
   // Create and style a new button for Let's Go!
   const letsGoBtn = document.createElement("button");
   var videoPlayer = document.getElementById("videoPlayer");
+  var imageContainer = document.getElementById("imageContainer");
   letsGoBtn.textContent = "My Reaction afterwards";
   letsGoBtn.classList.add("letsgo-btn"); // You can add a class for styling if needed
   letsGoBtn.style.position = "absolute";
@@ -142,11 +143,40 @@ const handleYesClick = () => {
         videoPlayer.style.width = "400px";
         videoPlayer.style.height = "550px";
         videoPlayer.play();
+        displayPictures();
   });
 
   // Replace yesBtn with the new letsGoBtn
   yesBtn.replaceWith(letsGoBtn);
 };
+
+function displayPictures() {
+    var imageURLs = [
+        "image/D1-removebg-preview.png",
+        "image/D2-removebg-preview.png",
+        "image/D3-removebg-preview.png"
+        "image/D4-removebg-preview.png"
+      
+    ]; // Replace these URLs with the actual URLs of your pictures
+    
+    imageURLs.forEach(function(url) {
+        var img = document.createElement("img");
+        img.src = url;
+        imageContainer.appendChild(img);
+    });
+}
+
+// Add event listener for when the video ends
+videoPlayer.addEventListener("ended", function() {
+    // Hide the video player
+    videoPlayer.style.display = "none";
+    
+    // Remove the pictures
+    while (imageContainer.firstChild) {
+        imageContainer.removeChild(imageContainer.firstChild);
+    }
+});
+
 videoPlayer.addEventListener("ended", function() {
     // Hide the video player
     videoPlayer.style.display = "none";
