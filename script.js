@@ -121,6 +121,7 @@ const handleYesClick = () => {
 
   // Create and style a new button for Let's Go!
   const letsGoBtn = document.createElement("button");
+  var videoPlayer = document.getElementById("videoPlayer");
   letsGoBtn.textContent = "Let's Go!";
   letsGoBtn.classList.add("letsgo-btn"); // You can add a class for styling if needed
   letsGoBtn.style.position = "absolute";
@@ -137,6 +138,7 @@ const handleYesClick = () => {
 
   // Add a click event listener to prompt the user with random romantic date ideas
   letsGoBtn.addEventListener("click", () => {
+        videoPlayer.play();
   });
 
   // Replace yesBtn with the new letsGoBtn
