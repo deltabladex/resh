@@ -152,22 +152,25 @@ const handleYesClick = () => {
 
 
 
-// Add event listener for when the video ends
 videoPlayer.addEventListener("ended", function() {
     // Hide the video player
     videoPlayer.style.display = "none";
     
-    // Remove the pictures
-    while (imageContainer.firstChild) {
-        imageContainer.removeChild(imageContainer.firstChild);
-    }
+    // Display a single picture after the video ends
+    displayPicture();
 });
 
-videoPlayer.addEventListener("ended", function() {
-    // Hide the video player
-    videoPlayer.style.display = "none";
-});
-
+// Function to display a single picture
+function displayPicture() {
+    var imageURL = "image/D3-removebg-preview.png"; // Replace this URL with the actual URL of your picture
+    
+    var img = document.createElement("img");
+    img.src = imageURL;
+    imageContainer.appendChild(img);
+    
+    // Display the image container
+    imageContainer.style.display = "block";
+}
 const handleNoMouseOver = () => {
   const { width, height } = noBtn.getBoundingClientRect();
   const maxX = window.innerWidth - width;
