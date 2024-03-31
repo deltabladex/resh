@@ -162,7 +162,7 @@ noBtn.addEventListener("mouseover", handleNoMouseOver);
 document.getElementById("playButton").addEventListener("click", function() {
     var videoContainer = document.getElementById("videoContainer");
     var videoElement = document.createElement("video");
-    videoElement.setAttribute("controls", true);
+    videoElement.setAttribute("controls", true width="400" height="550");
     
     var sourceElement = document.createElement("source");
     sourceElement.setAttribute("src", "image/POV.mp4");
