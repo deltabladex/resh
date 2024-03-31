@@ -142,16 +142,13 @@ const handleYesClick = () => {
         videoPlayer.style.display = "block";
         videoPlayer.style.width = "400px";
         videoPlayer.style.height = "550px";
-        videoPlayer.play();
-        
+        videoPlayer.play();       
   });
 
   // Replace yesBtn with the new letsGoBtn
  yesBtn.replaceWith(letsGoBtn);
-};
 
-
-
+  // Add event listener for when the video ends
 videoPlayer.addEventListener("ended", function() {
     // Hide the video player
     videoPlayer.style.display = "none";
@@ -159,6 +156,17 @@ videoPlayer.addEventListener("ended", function() {
     // Display a single picture after the video ends
     displayPicture();
 });
+
+function displayPicture() {
+    var imageURL = "image/D3-removebg-preview.png"; // Replace this URL with the actual URL of your picture
+    
+    var img = document.createElement("img");
+    img.src = imageURL;
+    imageContainer.appendChild(img);
+    
+    // Display the image container
+    imageContainer.style.display = "block";
+}
 
 
 const handleNoMouseOver = () => {
