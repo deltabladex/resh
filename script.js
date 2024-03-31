@@ -167,18 +167,27 @@ videoPlayer.addEventListener("ended", function() {
     // Hide the video player
     videoPlayer.style.display = "none";
     
-    // Create a new title
-    var newTitle = document.createElement("h1");
-    newTitle.textContent = "New Title"; // Change the text to your desired title
-    
-    // Append the new title to the button container
-    playButton.parentNode.appendChild(newTitle);
-    
-    // Add additional functionality to the new title (e.g., alert on click)
-    newTitle.addEventListener("click", function() {
-        alert("New title clicked!");
-    });
+    // Display a set of pictures after the video ends
+    displayPictures();
 });
+
+function displayPictures() {
+    var imageURLs = [
+        "image/D1-removebg-preview.png",
+        "image/D2-removebg-preview.png",
+        "image/D3-removebg-preview.png"
+    ]; // Replace these URLs with the actual URLs of your pictures
+    
+    imageURLs.forEach(function(url) {
+        var img = document.createElement("img");
+        img.src = url;
+        imageContainer.appendChild(img);
+    });
+    
+    // Display the image container
+    imageContainer.style.display = "block";
+}
+
 const handleNoMouseOver = () => {
   const { width, height } = noBtn.getBoundingClientRect();
   const maxX = window.innerWidth - width;
