@@ -166,28 +166,7 @@ videoPlayer.addEventListener("ended", function() {
 videoPlayer.addEventListener("ended", function() {
     // Hide the video player
     videoPlayer.style.display = "none";
-    
-    // Display a set of pictures after the video ends
-    displayPictures();
 });
-
-function displayPictures() {
-    var imageURLs = [
-        "image/D1-removebg-preview.png",
-        "image/D2-removebg-preview.png",
-        "image/D3-removebg-preview.png"
-    ]; // Replace these URLs with the actual URLs of your pictures
-    
-    imageURLs.forEach(function(url) {
-        var img = document.createElement("img");
-        img.src = url;
-        imageContainer.appendChild(img);
-    });
-    
-    // Display the image container
-    imageContainer.style.display = "block";
-   
-}
 
 const handleNoMouseOver = () => {
   const { width, height } = noBtn.getBoundingClientRect();
