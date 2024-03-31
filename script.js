@@ -144,14 +144,10 @@ const handleYesClick = () => {
     videoElement.setAttribute("height", "550");
   
     var sourceElement = document.createElement("source");
-    sourceElement.setAttribute("src", "image/POV.mp4");
-    sourceElement.setAttribute("type", "video/mp4");
-    
-    videoElement.appendChild(sourceElement);
-    videoContainer.appendChild(videoElement);
-    });
-    
-    videoElement.play();
+   const randomIndex = Math.floor(Math.random() * dateIdeas.length);
+    const selectedDateIdea = dateIdeas[randomIndex];
+
+    alert(`How about this romantic date idea: ${selectedDateIdea}`);
   });
 
   // Replace yesBtn with the new letsGoBtn
