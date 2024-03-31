@@ -158,3 +158,18 @@ const handleNoMouseOver = () => {
 
 yesBtn.addEventListener("click", handleYesClick);
 noBtn.addEventListener("mouseover", handleNoMouseOver);
+
+document.getElementById("playButton").addEventListener("click", function() {
+    var videoContainer = document.getElementById("videoContainer");
+    var videoElement = document.createElement("video");
+    videoElement.setAttribute("controls", true);
+    
+    var sourceElement = document.createElement("source");
+    sourceElement.setAttribute("src", "image/POV.mp4");
+    sourceElement.setAttribute("type", "video/mp4");
+    
+    videoElement.appendChild(sourceElement);
+    videoContainer.appendChild(videoElement);
+    
+    videoElement.play();
+});
