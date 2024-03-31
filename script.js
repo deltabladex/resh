@@ -137,10 +137,6 @@ const handleYesClick = () => {
 
   // Add a click event listener to prompt the user with random romantic date ideas
   letsGoBtn.addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * dateIdeas.length);
-    const selectedDateIdea = dateIdeas[randomIndex];
-
-    alert(`How about this romantic date idea: ${selectedDateIdea}`);
   });
 
   // Replace yesBtn with the new letsGoBtn
